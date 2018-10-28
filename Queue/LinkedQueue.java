@@ -30,10 +30,9 @@ public class LinkedQueue<T> implements Queue<T> {
 
    public void enqueue(T x) {
       Node<T> newRear = new Node<T>(x, null);
-      if (rear != null)
-         rear.setNext(newRear);
-      else
-         front = newRear;
+      if (rear != null) { rear.setNext(newRear); }
+
+      else { front = newRear; }
       rear = newRear;
       size++;
    }
